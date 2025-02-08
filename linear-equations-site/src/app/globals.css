@@ -1,0 +1,83 @@
+:root {
+  --primary-color: #0E0D23; /* Oxford Blue */
+  --secondary-color: #1F1E38 ; /*Space Cadet */
+
+  --primary-text: #E4E4E4; /* Platinum */
+  --secondary-text: #D9D9D9 ; /*Platinum */
+
+  --primary-accent-color: #D1CFEE; /*Periwinkle */
+  --secondary-accent-color: #3A3D98; /*Marian Blue*/
+}
+
+
+header {
+  display: flex;
+  height: 87px;
+  min-height: 87px;
+  padding-top: 5px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+header > div {
+  display: flex;
+  padding: 0px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+h1 {
+  flex: 1 0 0;
+  color: var(--White, #FFF);
+  text-align: center;
+  font-family: "EB Garamond";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
