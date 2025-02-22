@@ -1,0 +1,51 @@
+
+.container {
+    display: flex;
+    width: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.labelText {
+    flex: 1 0 0;
+}
+
+.labelValue {
+    text-align: right;
+}
+
+.description {
+    align-self: stretch;
+}
+
+.slider {
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: var(--primary-accent-color);
+    align-self: stretch;
+}
+
+.slider::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
