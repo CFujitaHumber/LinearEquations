@@ -22,16 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${EBGaramond.variable} ${STIXTwoText.variable}`}>
-        <header style={{position: "fixed", top: 0, width: "100%"}}>
-          <div >
-            <h1>Linear Equations</h1>
-            <Image
-              src="/menu.svg"
-              alt="menu"
-              width={180}
-              height={38}
-              priority
-            />
+        <header style={{position: "fixed", top: 0, width: "100%",background: "#1C2541"}}>
+          <div>
+            <h1 id={"page-title"}>Linear Equations</h1>
           </div>
           <ScrollIndicator isSticky={true}/>
         </header>

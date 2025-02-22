@@ -2,30 +2,21 @@
   --Oxford-Blue: #001D3D;
   --Yale-Blue: #003566;
 
-  height: 50000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
 .main {
+  margin-top: 100px;
   display: flex;
-align-items: flex-start;
-gap: 10px;
-flex: 1 0 0;
-align-self: stretch;
-}
-
-.aside {
-  display: flex;
-  max-width: 325px;
-  padding: 25px 0px;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  flex: 1 0 0;
   align-self: stretch;
-
-  border-right: 3px solid var(--Oxford-Blue, #001D3D);
-  background: var(--Yale-Blue, #003566);
 }
+
 
 .content{
   display: flex;
@@ -43,4 +34,18 @@ align-self: stretch;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
+}
+
+
+.textBlock {
+  display: flex;
+  padding: 35px 15px 50px 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+
+  border: 3px solid var(--Dark-Secondary, #1C2541);
+  background: var(--Dark-Primary, #0B132B);
+  box-shadow: 0px 10px 50px 10px rgba(0, 0, 0, 0.25) inset;
 }

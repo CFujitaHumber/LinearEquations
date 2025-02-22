@@ -1,12 +1,10 @@
 :root {
-  --primary-color: #0E0D23; /* Oxford Blue */
-  --secondary-color: #1F1E38 ; /*Space Cadet */
-
-  --primary-text: #E4E4E4; /* Platinum */
-  --secondary-text: #D9D9D9 ; /*Platinum */
-
-  --primary-accent-color: #D1CFEE; /*Periwinkle */
-  --secondary-accent-color: #3A3D98; /*Marian Blue*/
+  --Dark-Primary: #0B132B;
+  --Dark-Primary-Accent: #D1CFEE;
+  --Dark-Primary-Text: #E4E4E4;
+  --Dark-Secondary:#1C2541;
+  --Dark-Secondary-Accent: #3A3D98;
+  --Dark-Secondary-Text: #D9D9D9;
 }
 
 
@@ -20,6 +18,7 @@ header {
   align-items: center;
   gap: 3px;
   flex-shrink: 0;
+  z-index: 1;
   align-self: stretch;
 }
 
@@ -35,21 +34,30 @@ header > div {
 
 h1 {
   flex: 1 0 0;
-  color: var(--White, #FFF);
-  text-align: center;
+  color: var(--Dark-Primary-Text);
+
+  /* Heading1 */
   font-family: "EB Garamond";
-  font-size: 40px;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
+  letter-spacing: 1.5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.aside {
+  display: flex;
+  max-width: 325px;
+  padding: 25px 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  border-right: 3px solid var(--Dark-Secondary, #1C2541);
+  background: var(--Dark-Secondary, #1C2541);
 }
+
 
 html,
 body {
@@ -58,8 +66,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: var(--Dark-Primary, #0B132B);
+  color: var(--Dark-Primary-Text);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -76,8 +84,55 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+#page-title{
+  color: var(--Dark-Primary-Text, #E4E4E4);
+  text-align: center;
+  font-family: "EB Garamond";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+section {
+  display: flex;
+  padding: 15px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+h1 {
+  align-self: stretch;
+
+  margin-bottom: 5px;
+  font-family: "EB Garamond";
+  color: var(--primary-text);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  align-self: stretch;
+  
+  font-family: "EB Garamond";
+  color: var(--Dark-Secondary-Text);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.2px;
+}
+
+p {
+  color: var(--primary-text);
+  /* paragraph */
+  font-family: "STIX Two Text";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

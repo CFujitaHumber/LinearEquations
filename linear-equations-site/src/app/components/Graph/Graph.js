@@ -1,12 +1,9 @@
 
 "use client";
-import PropTypes, { func } from 'prop-types'
+import PropTypes from 'prop-types'
 import styles from './Graph.module.css'
-import { use, useState } from 'react'
 import Slider from '../Slider/Slider';
-import Vector from './vector';
 import SimpleGraph from '../SimpleGraph/SimpleGraph';
-import { Port_Lligat_Sans } from 'next/font/google';
 
 /**
  * Plots a Graph
